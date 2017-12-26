@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uygulama</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<%=render 'shared/navbar' %>
+<%= yield %>
+
+</body>
+<footer>
+   <div align="right">
+	Dil seçimi:
+	<%= link_to_unless_current "İngilizce", locale: "en" %>  |  
+	<%= link_to_unless_current "Türkçe", locale: "tr" %>
+	</div>
+</footer>
+</html> 
